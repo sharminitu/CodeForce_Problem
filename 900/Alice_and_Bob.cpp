@@ -7,7 +7,8 @@ int main()
 
     while (t--)
     {
-        long long n,k;
+        int n;
+        long long k;
         cin >> n>>k;
 
         vector<long long >v(n);
@@ -15,12 +16,14 @@ int main()
         int l=0,r=0;
         for(int i =0;i<n;i++){
             cin>>v[i];
-            if(v[i]<=k){
+            if(v[i]<k){
+            
                 l++;
-            }else{
-                r++;
             }
+            if(v[i]>k){
+                r++;
         }
+    }
 
        if(l>r){
         cout<<k-1<<endl;

@@ -5,7 +5,7 @@ int  main(){
     cin>>t;
     
     while(t--){
-        long long n,c;
+        long long n,c;-
         cin>>n>>c;
 
         vector<int>a(n);
