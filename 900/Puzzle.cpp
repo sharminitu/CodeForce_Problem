@@ -4,18 +4,18 @@ int main()
 {
     int n, k, c = 0;
     cin >> n >> k;
-    vector<int>v(n);
+    vector<int>v(k);
 
-    for(int i=0;i<n;i++){
+    for(int i=0;i<k;i++){
         cin>>v[i];
     }
     sort(v.begin(),v.end());
 
     int mn =INT_MAX;
-    for (int i = 1; i< k-n; i++)
+    for (int i = 0; i<= k-n; i++)
     {
-       
-    mn = min(mn, v[i+n-1] - v[i]);
+        int diff = abs(v[i]-v[n+i-1]);
+       mn = min(mn,diff);
     }
 
     cout << mn << endl;
